@@ -3,7 +3,7 @@ services:
     - docker
 
 before_install:
-    - docker build -t xpetr/docker-react -f Dockerfile.dev .
+    - docker build -t xpetr/docker-react .
 
 script:
     - docker run -e CI=true xpetr/docker-react npm run test
